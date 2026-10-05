@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>아트엠 스튜디오사운즈 · ArtM Studio Sounds</title>
-<meta name="description" content="아트엠 스튜디오사운즈는 결혼식·갤러리·카페를 위한 클래식 음악을 직접 편곡하고 제작합니다. 신부입장곡, 예식 순서별 음악, 카페·미술관 배경음악.">
+<meta name="description" content="아트엠 스튜디오사운즈는 연회·예식·갤러리·카페를 위한 클래식 음악을 직접 편곡하고 제작합니다. 신부입장곡, 예식 순서별 음악, 신부대기실·돌잔치 음악, 카페·미술관 배경음악.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://artmstudiosounds.com/">
 <meta property="og:title" content="ArtM Studio Sounds · 아트엠 스튜디오사운즈">
-<meta property="og:description" content="결혼식·갤러리·카페를 위한 클래식 음악 · Classical music for weddings, galleries and cafés">
+<meta property="og:description" content="연회·예식·갤러리·카페를 위한 클래식 음악 · Classical music for banquets, weddings, galleries &amp; cafés">
 <meta property="og:image" content="https://artmstudiosounds.com/assets/og.jpg">
 <meta name="theme-color" content="#13272a">
 <link rel="icon" type="image/png" href="assets/favicon.png">
@@ -26,7 +26,7 @@
   --serif-ko:"Noto Serif KR","Cormorant Garamond",serif;
   --sans:"Noto Sans KR",-apple-system,BlinkMacSystemFont,sans-serif;
 }
-*{box-sizing:border-box}
+*{box-sizing:border-box;font-variant-numeric:lining-nums}
 html{scroll-behavior:smooth}
 body{margin:0;font-variant-numeric:lining-nums;background:var(--cream);color:var(--ink);font:400 16px/1.75 var(--sans);-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
@@ -80,7 +80,7 @@ html[lang=en] h2{font-family:var(--serif-en);font-size:clamp(32px,4.4vw,46px)}
 .about h3{font:600 19px/1.4 var(--serif-ko);color:var(--green);margin:0 0 10px}
 html[lang=en] .about h3{font-family:var(--serif-en);font-size:23px}
 .about p{margin:0;color:var(--muted);font-size:15px}
-.about .num{font:600 15px var(--serif-en);color:var(--gold);letter-spacing:.1em}
+.about .num{font:600 13px var(--sans);color:var(--gold);letter-spacing:.1em}
 
 /* videos */
 .group-title{display:flex;align-items:baseline;gap:14px;margin:0 0 20px}
@@ -140,6 +140,38 @@ html[lang=en] .usage h3{font-family:var(--serif-en);font-size:23px}
 .social a:hover{border-color:var(--gold)}
 .social svg{width:18px;height:18px}
 
+/* new badge on video cards */
+.thumb .new{position:absolute;top:12px;left:12px;z-index:1;background:var(--gold);color:var(--green);font:600 11px var(--sans);letter-spacing:.12em;padding:4px 10px;border-radius:999px}
+
+/* wedding guide */
+.before{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:960px;margin:0 auto 40px}
+.before div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;font-size:15px;color:var(--muted)}
+.before b{display:block;font:600 13px var(--sans);color:var(--gold);letter-spacing:.1em;margin-bottom:4px}
+.steps{list-style:none;margin:0 auto;padding:0;max-width:860px;position:relative}
+.steps::before{content:"";position:absolute;left:23px;top:10px;bottom:10px;width:1px;background:var(--line)}
+.steps li{display:flex;gap:22px;padding:0 0 30px;position:relative}
+.step-n{flex:none;width:47px;height:47px;border-radius:50%;background:var(--green);color:var(--gold-soft);display:grid;place-items:center;font:600 14px var(--sans);position:relative}
+.step-b{flex:1;background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 24px}
+.step-b h3{font:600 20px/1.4 var(--serif-ko);color:var(--green);margin:0 0 4px}
+html[lang=en] .step-b h3{font-family:var(--serif-en);font-size:24px}
+.step-b .desc{margin:0 0 10px;color:var(--muted);font-size:15px}
+.step-b .pieces{margin:0;font-size:15.5px;line-height:1.85;color:var(--ink)}
+.step-b .tip{margin:12px 0 0;font-size:14px;color:#8a6d2f;background:#f8f1df;border-radius:8px;padding:8px 12px}
+.step-b .jump{display:inline-block;margin-top:14px;font-size:14px;font-weight:500;color:var(--green);text-decoration:none;border-bottom:1px solid var(--gold)}
+.step-b .jump:hover{color:#8a6d2f}
+
+/* instagram grid */
+.ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:760px;margin:0 auto}
+.ig-grid a{position:relative;display:block;border-radius:8px;overflow:hidden;aspect-ratio:4/5;background:var(--green)}
+.ig-grid img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.ig-grid a:hover img{transform:scale(1.04)}
+.ig-grid a>span{position:absolute;inset:auto 0 0;padding:28px 10px 10px;font-size:13px;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.6));opacity:0;transition:opacity .25s}
+.ig-grid a:hover>span{opacity:1}
+.ig-btn{border:1px solid var(--line);background:#fff;color:var(--ink)}
+.ig-btn:hover{border-color:var(--gold)}
+@media (max-width:860px){ .before{grid-template-columns:1fr} }
+@media (max-width:480px){ .ig-grid{gap:4px} .steps::before{left:17px} .step-n{width:35px;height:35px;font-size:13px} .steps li{gap:12px} .step-b{padding:18px 16px} }
+
 footer{background:#0e1d1f;color:rgba(233,226,210,.7);font-size:13px;padding:34px 0;text-align:center}
 footer p{margin:4px 0}
 
@@ -165,6 +197,8 @@ footer p{margin:4px 0}
     <nav>
       <a href="#about"><span class="ko">소개</span><span class="en">About</span></a>
       <a href="#music"><span class="ko">음악</span><span class="en">Music</span></a>
+      <a href="#guide"><span class="ko">결혼식 가이드</span><span class="en">Wedding Guide</span></a>
+      <a href="#instagram"><span class="ko">인스타그램</span><span class="en">Instagram</span></a>
       <a href="#usage"><span class="ko">사용 안내</span><span class="en">Usage</span></a>
       <a href="#contact"><span class="ko">문의</span><span class="en">Contact</span></a>
     </nav>
@@ -176,11 +210,11 @@ footer p{margin:4px 0}
 <div class="hero">
   <div class="inner">
     <img class="logo" src="assets/logo.jpg" alt="ArtM Studio Sounds">
-    <div class="eyebrow"><span class="ko">아트엠 스튜디오사운즈</span><span class="en">Classical · Wedding · Gallery</span></div>
+    <div class="eyebrow"><span class="ko">아트엠 스튜디오사운즈</span><span class="en">Banquet · Wedding · Gallery · Café</span></div>
     <h1>ArtM Studio Sounds</h1>
     <p class="lead">
-      <span class="ko">결혼식과 갤러리, 카페를 위한 클래식 음악.<br>오래 사랑받은 명곡을 직접 편곡하고 제작합니다.</span>
-      <span class="en">Classical music for weddings, galleries and cafés —<br>timeless pieces, newly arranged and produced by us.</span>
+      <span class="ko">연회·예식·갤러리·카페를 위한 클래식 음악.<br>오래 사랑받은 명곡을 직접 편곡하고 제작합니다.</span>
+      <span class="en">Classical music for banquets, weddings, galleries &amp; cafés —<br>timeless pieces, newly arranged and produced by us.</span>
     </p>
     <div class="btns">
       <a class="btn gold" href="https://www.youtube.com/@artmstudiosounds" target="_blank" rel="noopener">
@@ -249,16 +283,32 @@ footer p{margin:4px 0}
           <p><span class="ko">하객 맞이부터 케이크 커팅까지, 이 영상 하나로</span><span class="en">From greeting guests to the cake cutting, in one video</span></p></div>
       </article>
       <article class="card">
+        <button class="thumb" data-id="4hsdpED9Pek" aria-label="재생"><i class="play"></i><span class="new">NEW</span></button>
+        <div class="body"><span class="tag">1<span class="ko">시간</span><span class="en"> hour</span></span>
+          <h4><span class="ko">1시간 신부대기실 음악</span><span class="en">1 Hour of Bridal Suite Music</span></h4>
+          <p><span class="ko">버진로드를 걷기 전, 가장 설레는 시간의 잔잔한 피아노</span><span class="en">Gentle piano for the hour before the aisle</span></p></div>
+      </article>
+      <article class="card">
+        <button class="thumb" data-id="KDSUCsVj3b8" aria-label="재생"><i class="play"></i><span class="new">NEW</span></button>
+        <div class="body"><span class="tag">10<span class="ko">시간</span><span class="en"> hours</span></span>
+          <h4><span class="ko">10시간 결혼식 배경음악 | 궁전 홀의 피아노와 플루트</span><span class="en">10 Hours of Palace Wedding Music · Piano &amp; Flute</span></h4>
+          <p><span class="ko">예식·리셉션·디너까지 종일 틀어 두는 음악</span><span class="en">All-day music for the ceremony, reception and dinner</span></p></div>
+      </article>
+      <article class="card">
         <button class="thumb" data-id="w49uPm6a0MM" aria-label="재생"><i class="play"></i></button>
         <div class="body"><span class="tag">30<span class="ko">분</span><span class="en"> min</span></span>
           <h4><span class="ko">30분 신부입장곡 | 결혼식 피아노 10선</span><span class="en">30-Minute Bridal Entrance Piano · 10 Pieces</span></h4>
           <p><span class="ko">예식장이 직접 고른 잔잔하고 화려한 곡</span><span class="en">Gentle and radiant pieces chosen by wedding venues</span></p></div>
       </article>
+    </div>
+
+    <div class="group-title"><h3><span class="ko">돌잔치·가족 행사</span><span class="en">Family Celebrations</span></h3><span></span></div>
+    <div class="grid">
       <article class="card">
-        <button class="thumb" data-id="GQnssea2q5M" aria-label="재생"><i class="play"></i></button>
-        <div class="body"><span class="tag">10<span class="ko">시간</span><span class="en"> hours</span></span>
-          <h4><span class="ko">10시간 우아한 결혼식 배경음악</span><span class="en">10 Hours of Elegant Wedding Background Music</span></h4>
-          <p><span class="ko">예식·리셉션·디너까지 종일 틀어 두는 음악</span><span class="en">All-day music for the ceremony, reception and dinner</span></p></div>
+        <button class="thumb" data-id="xrzcgyTji-c" aria-label="재생"><i class="play"></i><span class="new">NEW</span></button>
+        <div class="body"><span class="tag">48<span class="ko">분</span><span class="en"> min</span></span>
+          <h4><span class="ko">돌잔치 순서별 음악 16곡</span><span class="en">First Birthday Party Music in Order · 16 Pieces</span></h4>
+          <p><span class="ko">하객 맞이부터 돌잡이, 배웅까지 이 영상 하나로</span><span class="en">From welcoming guests to the farewell, in one video</span></p></div>
       </article>
     </div>
 
@@ -276,30 +326,146 @@ footer p{margin:4px 0}
           <h4><span class="ko">2시간 카페 음악 | 갤러리의 밝은 아침</span><span class="en">2 Hours of Café Music · A Bright Gallery Morning</span></h4>
           <p><span class="ko">피아노·플루트 집중·독서·업무 음악</span><span class="en">Piano and flute for focus and reading</span></p></div>
       </article>
+      <article class="card">
+        <button class="thumb" data-id="ZFTTuSP6fqk" aria-label="재생"><i class="play"></i></button>
+        <div class="body"><span class="tag">2<span class="ko">시간</span><span class="en"> hours</span></span>
+          <h4><span class="ko">2시간 파리 카페의 아침 피아노</span><span class="en">2 Hours of Morning Piano in a Paris Café</span></h4>
+          <p><span class="ko">집중·휴식 배경음악</span><span class="en">For focus and rest</span></p></div>
+      </article>
     </div>
 
     <div class="group-title"><h3><span class="ko">신부입장곡 쇼츠</span><span class="en">Bridal Entrance Shorts</span></h3><span></span></div>
     <div class="shorts">
       <a class="short" href="https://www.youtube.com/shorts/VxZ5Gg7vnHQ" target="_blank" rel="noopener"><div class="img" style="background-image:url(https://i.ytimg.com/vi/VxZ5Gg7vnHQ/oar2.jpg)"></div><b><span class="ko">바그너 결혼행진곡</span><span class="en">Wagner · Bridal Chorus</span></b><small><span class="ko">문이 열리는 순간</span><span class="en">As the doors open</span></small></a>
+      <a class="short" href="https://www.youtube.com/shorts/cDyNlCrHnKs" target="_blank" rel="noopener"><div class="img" style="background-image:url(https://i.ytimg.com/vi/cDyNlCrHnKs/oar2.jpg)"></div><b><span class="ko">슈베르트 아베 마리아</span><span class="en">Schubert · Ave Maria</span></b><small><span class="ko">성당 결혼식의 경건한 입장곡</span><span class="en">For a church ceremony</span></small></a>
       <a class="short" href="https://www.youtube.com/shorts/1d93ol4G_1U" target="_blank" rel="noopener"><div class="img" style="background-image:url(https://i.ytimg.com/vi/1d93ol4G_1U/oar2.jpg)"></div><b><span class="ko">파헬벨 캐논 D장조</span><span class="en">Pachelbel · Canon in D</span></b><small><span class="ko">잔잔하게 걸어 들어가고 싶다면</span><span class="en">For a gentle entrance</span></small></a>
       <a class="short" href="https://www.youtube.com/shorts/Yny6UEahRP8" target="_blank" rel="noopener"><div class="img" style="background-image:url(https://i.ytimg.com/vi/Yny6UEahRP8/oar2.jpg)"></div><b><span class="ko">클라크 트럼펫 볼런터리</span><span class="en">Clarke · Trumpet Voluntary</span></b><small><span class="ko">왕실 결혼식의 트럼펫</span><span class="en">The royal-wedding trumpet</span></small></a>
-      <a class="short" href="https://www.youtube.com/shorts/cDyNlCrHnKs" target="_blank" rel="noopener"><div class="img" style="background-image:url(https://i.ytimg.com/vi/cDyNlCrHnKs/oar2.jpg)"></div><b><span class="ko">슈베르트 아베 마리아</span><span class="en">Schubert · Ave Maria</span></b><small><span class="ko">성당 결혼식의 경건한 입장곡</span><span class="en">For a church ceremony</span></small></a>
+      <a class="short" href="https://www.youtube.com/shorts/KV4oM4_651Q" target="_blank" rel="noopener"><div class="img" style="background-image:url(https://i.ytimg.com/vi/KV4oM4_651Q/oar2.jpg)"></div><b><span class="ko">바흐 예수, 인간 소망의 기쁨</span><span class="en">Bach · Jesu, Joy of Man’s Desiring</span></b><small><span class="ko">유럽 교회 결혼식의 단골 입장곡</span><span class="en">A European church favourite</span></small></a>
+      <a class="short" href="https://www.youtube.com/shorts/won2QUGukV8" target="_blank" rel="noopener"><div class="img" style="background-image:url(https://i.ytimg.com/vi/won2QUGukV8/oar2.jpg)"></div><b><span class="ko">퍼셀 트럼펫 튠</span><span class="en">Purcell · Trumpet Tune</span></b><small><span class="ko">밝고 당당하게</span><span class="en">Bright and confident</span></small></a>
       <a class="short" href="https://www.youtube.com/shorts/PLb9uX3aIQA" target="_blank" rel="noopener"><div class="img" style="background-image:url(https://i.ytimg.com/vi/PLb9uX3aIQA/oar2.jpg)"></div><b><span class="ko">리스트 사랑의 꿈 3번</span><span class="en">Liszt · Liebestraum No. 3</span></b><small><span class="ko">사랑할 수 있는 한 사랑하라</span><span class="en">Love as long as you can</span></small></a>
       <a class="short" href="https://www.youtube.com/shorts/oE9cUPhasdE" target="_blank" rel="noopener"><div class="img" style="background-image:url(https://i.ytimg.com/vi/oE9cUPhasdE/oar2.jpg)"></div><b><span class="ko">쇼팽 녹턴 Op.9 No.2</span><span class="en">Chopin · Nocturne Op. 9 No. 2</span></b><small><span class="ko">조용하고 우아하게</span><span class="en">Quiet and graceful</span></small></a>
-      <a class="short" href="https://www.youtube.com/shorts/won2QUGukV8" target="_blank" rel="noopener"><div class="img" style="background-image:url(https://i.ytimg.com/vi/won2QUGukV8/oar2.jpg)"></div><b><span class="ko">퍼셀 트럼펫 튠</span><span class="en">Purcell · Trumpet Tune</span></b><small><span class="ko">밝고 당당하게</span><span class="en">Bright and confident</span></small></a>
     </div>
 
     <div class="group-title" style="margin-top:56px"><h3><span class="ko">곧 공개</span><span class="en">Coming Soon</span></h3><span></span></div>
     <div class="soon">
-      <article class="card"><div class="thumb" style="background-image:url(assets/palace.jpg)"><span class="badge">SOON</span></div>
-        <div class="body"><h4>Palace Wedding Music</h4><p><span class="ko">10시간 · 궁전 웨딩 피아노 &amp; 플루트</span><span class="en">10 hours · piano &amp; flute</span></p></div></article>
+      <article class="card"><div class="thumb" style="background-image:url(assets/ig/groom10.jpg);background-position:50% 30%"><span class="badge">SOON</span></div>
+        <div class="body"><h4><span class="ko">신랑 입장곡 10선</span><span class="en">10 Groom Entrance Songs</span></h4><p><span class="ko">신부입장곡과 겹치지 않는 당당한 10곡</span><span class="en">Ten confident pieces, none shared with the bridal set</span></p></div></article>
       <article class="card"><div class="thumb" style="background-image:url(assets/museum.jpg)"><span class="badge">SOON</span></div>
         <div class="body"><h4>Museum Background Music</h4><p><span class="ko">5시간 · 대리석 홀의 잔잔한 피아노</span><span class="en">5 hours · calm piano in a marble hall</span></p></div></article>
-      <article class="card"><div class="thumb" style="background-image:url(assets/firstbirthday.jpg)"><span class="badge">SOON</span></div>
-        <div class="body"><h4><span class="ko">돌잔치 순서별 음악</span><span class="en">First Birthday Celebration Music</span></h4><p><span class="ko">48분 · 하객 맞이부터 배웅까지 16곡</span><span class="en">48 min · 16 pieces in running order</span></p></div></article>
-      <article class="card"><div class="thumb text-cover"><span class="badge">SOON</span>10 Groom<br>Entrance Songs</div>
-        <div class="body"><h4><span class="ko">신랑 입장곡 10선</span><span class="en">10 Groom Entrance Songs</span></h4><p><span class="ko">신부입장곡과 겹치지 않는 당당한 10곡</span><span class="en">Ten confident pieces, none shared with the bridal set</span></p></div></article>
     </div>
+  </div>
+</section>
+
+<!-- guide -->
+<section id="guide">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Wedding Music Guide</div>
+      <h2><span class="ko">결혼식 음악, 순서별로 고르는 법</span><span class="en">Choosing Wedding Music, Moment by Moment</span></h2>
+      <p><span class="ko">하객 맞이부터 케이크 커팅까지 장면별 추천곡입니다. 「70분 예식 순서별 음악」에 이 순서 그대로 담았으니, 각 장면의 시간부터 바로 들어 보세요.</span><span class="en">Our picks for every moment, from welcoming guests to the cake. They play in exactly this order in our 70-minute ceremony video — jump straight to any moment.</span></p>
+      <div class="rule"></div>
+    </div>
+    <div class="before">
+      <div><b>01</b><span class="ko">장면마다 한 곡씩, 순서표를 먼저 만들어요</span><span class="en">One piece per moment — make the running order first</span></div>
+      <div><b>02</b><span class="ko">곡 목록은 예식장 음향 담당자에게 미리 전달해요</span><span class="en">Send the list to the venue’s sound staff in advance</span></div>
+      <div><b>03</b><span class="ko">파일은 「01_신랑입장」처럼 순서대로 이름을 붙여요</span><span class="en">Name files in order, like “01_Groom”</span></div>
+    </div>
+    <ol class="steps">
+      <li>
+        <div class="step-n">01</div>
+        <div class="step-b">
+          <h3><span class="ko">식전 · 하객 맞이</span><span class="en">Prelude · Welcoming Guests</span></h3>
+          <p class="desc"><span class="ko">하객들의 대화를 덮지 않는 잔잔한 곡이 좋아요.</span><span class="en">Calm music that never talks over your guests.</span></p>
+          <p class="pieces"><span class="ko">사티 짐노페디 1번 · 바흐 평균율 전주곡 C장조 · 드뷔시 아라베스크 1번 · 드뷔시 달빛 · 슈만 트로이메라이</span><span class="en">Satie Gymnopédie No. 1 · Bach Prelude in C · Debussy Arabesque No. 1 · Debussy Clair de lune · Schumann Träumerei</span></p>
+          <p class="tip"><span class="ko">하객 입장은 생각보다 길어져요. 20~30분 분량을 넉넉하게 준비하세요.</span><span class="en">Guest arrival runs long — have 20–30 minutes ready.</span></p>
+          <a class="jump" href="https://youtu.be/ckgocda-R2Q?t=0" target="_blank" rel="noopener">▶ <span class="ko">0:00부터 듣기</span><span class="en">Listen from 0:00</span></a>
+        </div>
+      </li>
+      <li>
+        <div class="step-n">02</div>
+        <div class="step-b">
+          <h3><span class="ko">화촉 점화</span><span class="en">Lighting the Candles</span></h3>
+          <p class="desc"><span class="ko">양가 어머니의 화촉 점화에 따뜻한 곡을.</span><span class="en">A warm piece as the two mothers light the candles.</span></p>
+          <p class="pieces"><span class="ko">엘가 사랑의 인사</span><span class="en">Elgar · Salut d’Amour</span></p>
+          
+          <a class="jump" href="https://youtu.be/ckgocda-R2Q?t=1258" target="_blank" rel="noopener">▶ <span class="ko">20:58부터 듣기</span><span class="en">Listen from 20:58</span></a>
+        </div>
+      </li>
+      <li>
+        <div class="step-n">03</div>
+        <div class="step-b">
+          <h3><span class="ko">신랑 입장</span><span class="en">Groom’s Entrance</span></h3>
+          <p class="desc"><span class="ko">밝고 당당한 행진곡으로 예식의 시작을 알려요.</span><span class="en">A bright, confident march opens the ceremony.</span></p>
+          <p class="pieces"><span class="ko">베르디 「아이다」 개선행진곡</span><span class="en">Verdi · Triumphal March from Aida</span></p>
+          <p class="tip"><span class="ko">신랑 입장은 짧아요. 곡의 가장 힘찬 부분부터 시작하도록 맞춰 두세요.</span><span class="en">The groom’s walk is short — start from the strongest bar.</span></p>
+          <a class="jump" href="https://youtu.be/ckgocda-R2Q?t=1430" target="_blank" rel="noopener">▶ <span class="ko">23:50부터 듣기</span><span class="en">Listen from 23:50</span></a>
+        </div>
+      </li>
+      <li>
+        <div class="step-n">04</div>
+        <div class="step-b">
+          <h3><span class="ko">신부 입장</span><span class="en">Bride’s Entrance</span></h3>
+          <p class="desc"><span class="ko">분위기로 고르세요.</span><span class="en">Choose by mood.</span></p>
+          <p class="pieces"><span class="ko">정통 — 바그너 결혼행진곡<br>잔잔하게 — 파헬벨 캐논 · 쇼팽 녹턴 Op.9 No.2<br>화려하게 — 클라크 트럼펫 볼런터리 · 퍼셀 트럼펫 튠<br>경건하게 — 슈베르트 아베 마리아<br>낭만적으로 — 리스트 사랑의 꿈 3번 · 엘가 사랑의 인사</span><span class="en">Classic — Wagner Bridal Chorus<br>Gentle — Pachelbel Canon · Chopin Nocturne Op. 9 No. 2<br>Radiant — Clarke Trumpet Voluntary · Purcell Trumpet Tune<br>Reverent — Schubert Ave Maria<br>Romantic — Liszt Liebestraum No. 3 · Elgar Salut d’Amour</span></p>
+          <p class="tip"><span class="ko">10곡 전체는 「40분 신부입장곡」에서 들어 보세요.</span><span class="en">Hear all ten in the 40-minute Bridal Entrance video.</span></p>
+          <a class="jump" href="https://youtu.be/ckgocda-R2Q?t=1530" target="_blank" rel="noopener">▶ <span class="ko">25:30부터 듣기</span><span class="en">Listen from 25:30</span></a>
+        </div>
+      </li>
+      <li>
+        <div class="step-n">05</div>
+        <div class="step-b">
+          <h3><span class="ko">서약 · 축가 · 인사</span><span class="en">Vows · Song · Thanks to Parents</span></h3>
+          <p class="desc"><span class="ko">예식의 가운데는 조용하고 따뜻한 곡으로 이어 가요.</span><span class="en">Keep the heart of the ceremony quiet and warm.</span></p>
+          <p class="pieces"><span class="ko">맞절·혼인서약 — 파헬벨 캐논<br>성혼선언·주례사 — 헨델 라르고 (옴브라 마이 푸)<br>축가·축주 — 바흐/구노 아베 마리아 · 리스트 사랑의 꿈<br>부모님께 인사 — 쇼팽 녹턴 Op.9 No.2</span><span class="en">Vows — Pachelbel Canon<br>Declaration — Handel Largo (Ombra mai fu)<br>Song — Bach/Gounod Ave Maria · Liszt Liebestraum<br>Thanks to parents — Chopin Nocturne Op. 9 No. 2</span></p>
+          
+          <a class="jump" href="https://youtu.be/ckgocda-R2Q?t=1655" target="_blank" rel="noopener">▶ <span class="ko">27:35부터 듣기</span><span class="en">Listen from 27:35</span></a>
+        </div>
+      </li>
+      <li>
+        <div class="step-n">06</div>
+        <div class="step-b">
+          <h3><span class="ko">신랑신부 행진</span><span class="en">Recessional</span></h3>
+          <p class="desc"><span class="ko">바그너는 입장, 멘델스존은 행진이에요. 두 곡 모두 ‘결혼행진곡’이라 자주 헷갈려요.</span><span class="en">Wagner is for the entrance, Mendelssohn for the recessional — both are called “wedding march”.</span></p>
+          <p class="pieces"><span class="ko">멘델스존 결혼행진곡 → 베토벤 환희의 송가</span><span class="en">Mendelssohn Wedding March → Beethoven Ode to Joy</span></p>
+          
+          <a class="jump" href="https://youtu.be/ckgocda-R2Q?t=2988" target="_blank" rel="noopener">▶ <span class="ko">49:48부터 듣기</span><span class="en">Listen from 49:48</span></a>
+        </div>
+      </li>
+      <li>
+        <div class="step-n">07</div>
+        <div class="step-b">
+          <h3><span class="ko">2부 · 케이크 · 연회</span><span class="en">Reception · Cake · Dinner</span></h3>
+          <p class="desc"><span class="ko">2부는 경쾌하게, 연회는 다시 잔잔하게.</span><span class="en">Lively for the second part, calm again for dinner.</span></p>
+          <p class="pieces"><span class="ko">재입장 — 라데츠키 행진곡<br>케이크 커팅 — 아름답고 푸른 도나우<br>연회 — 보케리니 미뉴에트 · 모차르트 아이네 클라이네 나흐트무지크</span><span class="en">Re-entrance — Radetzky March<br>Cake cutting — The Blue Danube<br>Dinner — Boccherini Minuet · Mozart Eine kleine Nachtmusik</span></p>
+          <p class="tip"><span class="ko">라데츠키 행진곡은 하객 박수가 자연스럽게 따라와요.</span><span class="en">Guests naturally clap along to the Radetzky March.</span></p>
+          <a class="jump" href="https://youtu.be/ckgocda-R2Q?t=3395" target="_blank" rel="noopener">▶ <span class="ko">56:35부터 듣기</span><span class="en">Listen from 56:35</span></a>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- instagram -->
+<section id="instagram" style="background:#fbf8f1;border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Instagram</div>
+      <h2>@artmstudiosounds</h2>
+      <p><span class="ko">곡마다 40초씩 미리 들어 보는 릴스와 결혼식 음악 가이드를 인스타그램에 올리고 있어요.</span><span class="en">40-second previews of every piece and our wedding-music guides, on Instagram.</span></p>
+      <div class="rule"></div>
+    </div>
+    <div class="ig-grid">
+      <a href="https://www.instagram.com/artmstudiosounds/" target="_blank" rel="noopener"><img src="assets/ig/bride40.jpg" alt="" loading="lazy" width="540" height="675"><span><span class="ko">40분 신부입장곡</span><span class="en">40-min Bridal Entrance</span></span></a>
+      <a href="https://www.instagram.com/artmstudiosounds/" target="_blank" rel="noopener"><img src="assets/ig/order70.jpg" alt="" loading="lazy" width="540" height="675"><span><span class="ko">70분 예식 순서별 음악</span><span class="en">70-min Ceremony Music</span></span></a>
+      <a href="https://www.instagram.com/artmstudiosounds/" target="_blank" rel="noopener"><img src="assets/ig/card_wagner.jpg" alt="" loading="lazy" width="540" height="675"><span><span class="ko">신부 입장 · 바그너 결혼행진곡</span><span class="en">Bride’s entrance · Wagner</span></span></a>
+      <a href="https://www.instagram.com/artmstudiosounds/" target="_blank" rel="noopener"><img src="assets/ig/palace10h.jpg" alt="" loading="lazy" width="540" height="675"><span><span class="ko">10시간 궁전 웨딩</span><span class="en">10-hour Palace Wedding</span></span></a>
+      <a href="https://www.instagram.com/artmstudiosounds/" target="_blank" rel="noopener"><img src="assets/ig/card_danube.jpg" alt="" loading="lazy" width="540" height="675"><span><span class="ko">케이크 커팅 · 아름답고 푸른 도나우</span><span class="en">Cake cutting · The Blue Danube</span></span></a>
+      <a href="https://www.instagram.com/artmstudiosounds/" target="_blank" rel="noopener"><img src="assets/ig/piano30.jpg" alt="" loading="lazy" width="540" height="675"><span><span class="ko">30분 결혼식 피아노</span><span class="en">30-min Wedding Piano</span></span></a>
+      <a href="https://www.instagram.com/artmstudiosounds/" target="_blank" rel="noopener"><img src="assets/ig/groom10.jpg" alt="" loading="lazy" width="540" height="675"><span><span class="ko">신랑입장곡 10선</span><span class="en">10 Groom Entrance Songs</span></span></a>
+      <a href="https://www.instagram.com/artmstudiosounds/" target="_blank" rel="noopener"><img src="assets/ig/gallery5h.jpg" alt="" loading="lazy" width="540" height="675"><span><span class="ko">5시간 갤러리 피아노</span><span class="en">5-hour Gallery Piano</span></span></a>
+      <a href="https://www.instagram.com/artmstudiosounds/" target="_blank" rel="noopener"><img src="assets/ig/cafe2h.jpg" alt="" loading="lazy" width="540" height="675"><span><span class="ko">2시간 카페 음악</span><span class="en">2-hour Café Music</span></span></a>
+    </div>
+    <div style="text-align:center;margin-top:30px"><a class="btn ig-btn" href="https://www.instagram.com/artmstudiosounds/" target="_blank" rel="noopener"><span class="ko">인스타그램에서 보기</span><span class="en">View on Instagram</span></a></div>
   </div>
 </section>
 
