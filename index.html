@@ -185,6 +185,12 @@ html[lang=en] .ig-grid a.ig-text b{font-family:var(--serif-en);font-size:19px}
 @media (max-width:860px){ .before{grid-template-columns:1fr} }
 @media (max-width:480px){ .ig-grid{gap:4px} .steps::before{left:17px} .step-n{width:35px;height:35px;font-size:13px} .steps li{gap:12px} .step-b{padding:18px 16px} }
 
+/* floating subscribe */
+.fab-sub{position:fixed;right:20px;bottom:20px;z-index:60;display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;background:#c4302b;color:#fff;font:600 14.5px var(--sans);text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.22);opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .3s,transform .3s}
+.fab-sub.show{opacity:1;transform:none;pointer-events:auto}
+.fab-sub:hover{background:#a82822}
+.fab-sub svg{width:18px;height:18px}
+@media (max-width:480px){ .fab-sub{right:16px;bottom:16px;padding:11px 16px;font-size:13.5px} }
 footer{background:#0e1d1f;color:rgba(233,226,210,.7);font-size:13px;padding:34px 0;text-align:center}
 footer p{margin:4px 0}
 
@@ -565,6 +571,7 @@ footer p{margin:4px 0}
   </div>
 </footer>
 
+<a class="fab-sub" id="fab-sub" href="https://www.youtube.com/@artmstudiosounds?sub_confirmation=1" target="_blank" rel="noopener" aria-label="YouTube 구독하기"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg><span class="ko">유튜브 구독하기</span><span class="en">Subscribe</span></a>
 <script>
 (function(){
   var root=document.documentElement;
@@ -580,7 +587,8 @@ footer p{margin:4px 0}
 
   // header background after scrolling past the hero
   var bar=document.getElementById('top-bar');
-  function onScroll(){ bar.classList.toggle('solid', window.scrollY > 40); }
+  var fab=document.getElementById('fab-sub');
+  function onScroll(){ bar.classList.toggle('solid', window.scrollY > 40); fab.classList.toggle('show', window.scrollY > window.innerHeight*0.7); }
   window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
 
   // lightweight YouTube: thumbnail first, iframe only on click
